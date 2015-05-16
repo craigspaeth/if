@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /* Global Tags */
 body {
   font-family: 'Volkhov', serif;
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.4em;
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -37,12 +37,21 @@ a {
   line-height: 1em;
 }
 
+.large-header {
+  font-size: 28px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1em;  
+}
+
 .flat-button {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 3px;
   background: #e46d21;
-  padding: 16px 25px;
+  padding: 16px 30px;
   color: white;
   font-weight: 900;
   border: 0;
@@ -51,11 +60,11 @@ a {
   font-family: 'Lato', sans-serif;
 }
 
-.full-screen-section {
-  background: black;
-  width: 100%;
+.copy-section {
+  width: 50%;
+  max-width: 650px;
+  margin-left: 50px;
   position: absolute;
-  height: 100%;
 }
 
 /* Main nav */
@@ -100,6 +109,15 @@ a {
 }
 
 /* Sections */
+.full-screen-section {
+  background: black;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
 .hero-unit-copy {
   width: 800px;
   height: 250px;
