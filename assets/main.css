@@ -46,6 +46,16 @@ a {
   line-height: 1em;  
 }
 
+.small-header {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1em;    
+  margin-bottom: 3px;
+}
+
 .flat-button {
   font-size: 14px;
   text-transform: uppercase;
@@ -80,6 +90,8 @@ a {
   background: transparent;
   font-size: 12px;
   letter-spacing: 2px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .main-nav-right {
@@ -87,8 +99,8 @@ a {
   right: 0;
 }
 
-.login-button, .signup-button {
-  border: 1px solid rgba(255,255,255,0.5);
+.main-nav .login-button, .main-nav .signup-button {
+  border: 1px solid rgba(255,255,255,0.3);
   padding: 8px 30px;
   margin-right: 20px;
 }
@@ -134,4 +146,40 @@ a {
 
 .hero-unit .flat-button {
   margin-top: 20px;
+}
+
+.portfolio-section {
+  text-align: center;
+}
+
+.portfolio-section-buttons {
+  margin: 60px 0;
+}
+
+.portfolio-section-buttons button {
+  margin-right: 15px;
+  background: rgba(0,0,0,0.5);
+}
+
+.portfolio-content-container {
+  width: 100%;
+  position: absolute;
+}
+
+.portfolio-input-container {
+  margin: 20px 0;
+}
+
+.portfolio-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 45px;
+  height: 40px;
+  margin: 0 5px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-family: 'Volkhov', serif;
+  font-size: 19px;
+  color: white;
+  padding: 10px
 }
