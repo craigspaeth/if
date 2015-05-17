@@ -37,3 +37,13 @@ var resizeSections = function () {
   });
 }
 $(window).on('resize', _.debounce(resizeSections));
+
+// Highlights navigation as you scroll
+$('.full-screen-section').waypoint({
+  handler: function(direction) {
+    var index = $(this).index('.full-screen-section');
+    if (direction == 'up' && index == 1) index = 0;
+    $('.side-navigation a').removeClass('is-active');
+    $('.side-navigation a:eq(' + index + ')').addClass('is-active');
+  }
+});
