@@ -43,7 +43,7 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 3px;
-  line-height: 1em;  
+  line-height: 1.2em;  
 }
 
 .small-header {
@@ -133,6 +133,44 @@ a {
   width: 160px;
   position: absolute;
   left: 20px;
+}
+
+/* Footer */
+.main-footer {
+  background: black;
+  padding: 15px 20px;
+}
+
+.main-footer-logo img {
+  width: 160px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-footer .flat-button {
+  background: transparent;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 15px; 
+}
+
+.main-footer-right {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  right: 0;
+}
+
+.main-footer .login-button, .main-footer .signup-button {
+  border: 1px solid #5a5b59;
+  padding: 8px 30px;
+  margin: 0 10px;
+}
+
+.main-footer .signup-button {
+  background: #5a5b59;
+  border-color: #5a5b59;
+  margin-right: 20px
 }
 
 /* Sections */
