@@ -1,0 +1,31 @@
+{
+  "name": "if",
+  "version": "1.0.0",
+  "description": "Website project for a client",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "ejs-cli": "^1.0.1",
+    "less": "^2.5.1",
+    "nib": "^1.1.0",
+    "stylus": "^0.51.1",
+    "watch-less": "^0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > out/index.html",
+    "styl": "stylus src/stylesheets/main.styl -o out/main.css",
+    "c": "npm run tmpl && npm run styl",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigspaeth/if.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigspaeth/if/issues"
+  },
+  "homepage": "https://github.com/craigspaeth/if"
+}

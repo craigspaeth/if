@@ -1,12 +1,14 @@
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+/* Add reset & import variables/mixins */
+
+@import '../../node_modules/nib'
+@import 'lib'
+global-reset()
 
 /* Global Tags */
 body {
   font-family: 'Volkhov', serif;
   font-size: 19px;
   line-height: 1.4em;
-  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
 }
@@ -17,14 +19,11 @@ body, html {
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Compoonents */
@@ -83,8 +82,7 @@ a {
   text-align: center;
 }
 
-.full-screen-section {
-  background: black;
+.content-section {
   width: 100%;
   min-height: 500px;
   position: relative;
@@ -135,74 +133,8 @@ a {
   left: 20px;
 }
 
-/* Side Nav */
-.side-navigation {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  margin-top: -80px;
-  width: 200px;
-  z-index: 2;
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 900;
-  text-align: right;
-}
-
-.side-navigation a {
-  color: transparent;
-  display: block;
-  cursor: pointer;
-  z-index: 3;
-  padding-right: 20px;
-  position: relative;
-}
-
-.side-navigation a:hover {
-  color: white;
-}
-
-.side-navigation a:after {
-  content: '.';
-  color: transparent;
-  width: 10px;
-  height: 10px;
-  background: white;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  position: absolute;
-  right: -4px;
-  margin-top: 7px;
-}
-
-.side-navigation a.is-active {
-  color: white;
-}
-
-.side-navigation a.is-active:after {
-  width: 15px;
-  height: 15px;
-  right: -6px;
-  margin-top: 7px;
-  background-color: #6eb14e;
-  z-index: 3;
-}
-
-.side-navigation::after {
-  content: '.';
-  height: calc(100% - 20px);
-  border-right: 2px solid white;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  color: transparent;
-}
-
 /* Footer */
 .main-footer {
-  background: black;
   padding: 15px 20px;
 }
 
@@ -282,7 +214,6 @@ a {
   border: 1px solid rgba(255,255,255,0.3);
   font-family: 'Volkhov', serif;
   font-size: 19px;
-  color: white;
   padding: 10px
 }
 
