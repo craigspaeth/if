@@ -13,8 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > out/index.html",
-    "styl": "stylus src/stylesheets/main.styl -o out/main.css",
+    "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > index.html",
+    "styl": "stylus src/stylesheets/main.styl -o main.css",
     "c": "npm run tmpl && npm run styl",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
