@@ -8,6 +8,7 @@
     "ejs-cli": "^1.0.1",
     "less": "^2.5.1",
     "nib": "^1.1.0",
+    "nodemon": "^1.3.7",
     "stylus": "^0.51.1",
     "watch-less": "^0.0.4"
   },
@@ -15,7 +16,8 @@
   "scripts": {
     "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > index.html",
     "styl": "stylus src/stylesheets/main.styl -o main.css",
-    "c": "npm run tmpl && npm run styl",
+    "c": "npm run styl & npm run tmpl",
+    "w": "nodemon --watch src -e styl,ejs --exec 'npm run c'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

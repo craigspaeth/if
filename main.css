@@ -1,4 +1,4 @@
-/* Add reset & import variables/mixins */
+/* CSS Reset */
 html,
 body,
 div,
@@ -90,7 +90,7 @@ td {
 a img {
   border: none;
 }
-/* Global Tags */
+/* Default tags */
 body {
   font-family: 'Volkhov', serif;
   font-size: 19px;
@@ -104,6 +104,7 @@ html {
   min-height: 100%;
 }
 a {
+  color: #2b2d2a;
   text-decoration: none;
 }
 * {
@@ -111,7 +112,7 @@ a {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Compoonents */
+/* Components */
 .larger-header {
   font-size: 42px;
   font-family: 'Lato', sans-serif;
@@ -165,10 +166,8 @@ a {
   width: 100%;
   min-height: 500px;
   position: relative;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
 }
-/* Main nav */
+/* Main navigation */
 .main-nav {
   position: fixed;
   top: 0;
@@ -178,7 +177,6 @@ a {
 }
 .main-nav .flat-button {
   background: transparent;
-  font-size: 12px;
   letter-spacing: 2px;
   padding-right: 20px;
   padding-left: 20px;
@@ -197,17 +195,22 @@ a {
   margin-left: 20px;
 }
 .main-nav .signup-button {
-  background: #6eb14e;
-  border-color: #6eb14e;
+  background: #6ea34e;
+  border-color: #6ea34e;
 }
 .main-nav-logo img {
-  width: 160px;
+  width: 194px;
   position: absolute;
   left: 20px;
+  top: 15px;
 }
 /* Footer */
 .main-footer {
   padding: 15px 20px;
+  background: #2b2d2a;
+}
+.main-footer a {
+  font-size: 12px;
 }
 .main-footer-logo img {
   width: 160px;
@@ -216,7 +219,6 @@ a {
 }
 .main-footer .flat-button {
   background: transparent;
-  font-size: 12px;
   padding: 0;
   margin: 0 15px;
 }
@@ -237,7 +239,11 @@ a {
   border-color: #5a5b59;
   margin-right: 20px;
 }
-/* Sections */
+/* Hero Unit */
+.hero-unit {
+  background: #2b2d2a;
+  height: 90vh;
+}
 .hero-unit-copy {
   width: 800px;
   height: 250px;
@@ -248,6 +254,7 @@ a {
   margin-left: -400px;
   margin-top: -125px;
   text-align: center;
+  color: #fff;
 }
 .hero-unit h1 {
   margin-bottom: 20px;
@@ -255,6 +262,7 @@ a {
 .hero-unit .flat-button {
   margin-top: 20px;
 }
+/* Sections */
 .portfolio-section-buttons {
   margin: 60px 0;
 }
