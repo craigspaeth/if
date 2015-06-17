@@ -1,11 +1,28 @@
-@import 'lib'
-
 .main-nav {
   position: fixed;
   top: 0;
   padding: 20px;
   z-index: 2;
   width: 100%;
+  height: 70px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.main-nav.active {
+  background: white;
+  border-bottom: 1px solid lighter-gray-color;
+}
+
+.main-nav.active .flat-button:not(.signup-button) {
+  color: darkest-gray-color;
+}
+
+.main-nav.active .login-button {
+  border: 1px solid lighter-gray-color;
+}
+
+.main-nav.active .main-nav-logo {
+  background-image: url("images/logo.svg");
 }
 
 .main-nav .flat-button {
@@ -36,19 +53,19 @@
 }
 
 .main-nav-logo {
-  width: 180px;
+  width: 190px;
   height: 40px;
   background: url("images/logow.svg") no-repeat center center;
   display: block;
   position: absolute;
-  top: 5px;
-  left: 7px;
+  top: 14px;
+  left: 20px;
 }
 
 .main-nav-hamburger {
   background: transparent;
-  top: 14px;
-  right: 18px;
+  top: 23px;
+  right: 25px;
   border: 0;
   background: url("images/hamburger.svg") no-repeat center center transparent;
   position: absolute;
@@ -68,8 +85,12 @@
   .main-nav {
     position: relative;
     padding: 0;
-    padding-top: 50px;
+    padding-top: 70px;
     text-align: center;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    outline: none;
   }
 
   .main-nav-hamburger {
@@ -80,9 +101,6 @@
     position: relative;
     background: darkest-gray-color;
     padding: 0 mobile-gutter-size;
-    max-height: 0;
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
   }
 
   .main-nav.active {
@@ -102,15 +120,16 @@
     display: block;
   }
 
+  .main-nav .login-button {
+    margin-right: (mobile-gutter-size / 2);
+  }
+
+  // MATH
   .main-nav .login-button, .main-nav .signup-button {
     width: "calc(50% - %s)" % (mobile-gutter-size / 2)
     margin: mobile-gutter-size 0 0 0;
     display: inline-block;
     vertical-align: top;
-  }
-
-  .main-nav .login-button {
-    margin-right: (mobile-gutter-size / 2);
   }
 
   .main-nav .signup-button {

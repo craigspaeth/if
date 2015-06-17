@@ -16,8 +16,9 @@
   "scripts": {
     "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > index.html",
     "styl": "stylus src/stylesheets/main.styl -o main.css",
-    "c": "npm run styl & npm run tmpl",
-    "w": "nodemon --watch src -e styl,ejs --exec 'npm run c'",
+    "js": "cat src/javascripts/*.js > main.js",
+    "c": "npm run styl & npm run tmpl & npm run js",
+    "w": "nodemon --watch src -e styl,ejs,js --exec 'npm run c'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
