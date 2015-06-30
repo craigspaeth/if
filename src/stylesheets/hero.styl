@@ -5,7 +5,7 @@
 }
 
 .hero-unit-copy {
-  width: 800px;
+  max-width: 800px;
   height: 250px;
   margin: auto;
   position: absolute;
@@ -15,6 +15,7 @@
   margin-top: -125px;
   text-align: center;
   color: white;
+  padding: 0 gutter-size;
 }
 
 .hero-unit h1 {
@@ -28,4 +29,40 @@
 
 .hero-unit .flat-button {
   margin-top: 20px;
+}
+
+/* iPad (portrait) */
+@media (max-width: 768px) {
+  
+  .hero-unit {
+    height: auto;
+  }
+  
+  .hero-unit-copy {
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    padding: gutter-size;
+  }
+}
+
+/* iPhone (portrait) */
+@media (max-width: 667px) {
+  
+  .hero-unit-copy {
+    padding: mobile-gutter-size;
+    padding-bottom: mobile-gutter-size + 5px;
+  }
+
+  .hero-unit-copy h1 {
+    font-size: lato-headline;
+    font-weight: 500;
+  }
+
+  .hero-unit-copy h2 {
+    font-size: vollkorn-small;
+    line-height: 1.3em;
+  }
 }

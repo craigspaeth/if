@@ -8,7 +8,7 @@ $(function() {
   // Toggle class of header
   $('.panel1').waypoint({
     handler: function(dir) {
-      $('.main-nav').toggleClass('active');
+      if($(window).width() > 768) $('.main-nav').toggleClass('active');
     },
     offset: $('.main-nav').outerHeight()
   });
