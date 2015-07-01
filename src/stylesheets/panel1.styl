@@ -16,7 +16,18 @@
   color: darker-gray-color;
 }
 
-// MATH
+.panel1-item h3 {
+  color: green-color;
+  margin: 20px auto 5px auto;
+  line-height: 1.4em;
+}
+
+.panel1-item img {
+  position: relative;
+  left: 85px;
+  z-index: 1;
+}
+
 .panel1 header {
   width: (col-width * 4) + (gutter-size * 3);
   margin: auto;
@@ -38,12 +49,12 @@
 
 /* iPhone (portrait) */
 @media (max-width: 667px) {
-  
+
   .panel1 header {
     width: auto;
     text-align: left;
   }
-  
+
   .panel1-item {
     width: 100%;
     float: none;

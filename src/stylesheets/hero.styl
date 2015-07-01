@@ -1,5 +1,5 @@
 .hero-unit {
-  background: darkest-gray-color;
+  background: black;
   height: 90vh;
   position: relative;
 }
@@ -29,15 +29,20 @@
 
 .hero-unit .flat-button {
   margin-top: 20px;
+  background-color: orange-color;
+}
+
+.hero-unit .flat-button:hover {
+  background-color: orange-light-color;
 }
 
 /* iPad (portrait) */
 @media (max-width: 768px) {
-  
+
   .hero-unit {
     height: auto;
   }
-  
+
   .hero-unit-copy {
     margin: 0;
     position: relative;
@@ -50,7 +55,7 @@
 
 /* iPhone (portrait) */
 @media (max-width: 667px) {
-  
+
   .hero-unit-copy {
     padding: mobile-gutter-size;
     padding-bottom: mobile-gutter-size + 5px;
@@ -65,4 +70,9 @@
     font-size: vollkorn-small;
     line-height: 1.3em;
   }
+
+  .hero-unit-copy .flat-button {
+    width: 100%;
+  }
 }
+

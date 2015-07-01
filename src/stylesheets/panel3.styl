@@ -7,7 +7,6 @@
   float: left;
 }
 
-// MATH
 .panel3 header {
   width: 50%;
   padding-left: (gutter-size / 2);
@@ -18,9 +17,26 @@
   padding-right: (gutter-size / 2);
 }
 
+.panel3-items img {
+  width: 50px;
+  float: left;
+  margin-right: 20px;
+}
+
+.panel3-items li {
+  clearfix();
+  margin-bottom: gutter-size;
+}
+
+.panel3-items h4 {
+  font-size: vollkorn-small;
+  color: darker-gray-color;
+  line-height: 1.3em;
+}
+
 /* iPhone (portrait) */
 @media (max-width: 667px) {
-  
+
   .panel3 {
     margin-bottom: mobile-gutter-size * 2;
   }
@@ -28,7 +44,7 @@
   .panel3-items {
     width: 100%;
   }
-  
+
   .panel3 header {
     width: 100%;
     padding: 0;

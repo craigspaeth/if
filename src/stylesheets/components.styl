@@ -31,11 +31,22 @@
   font-size: lato-body;
   text-transform: uppercase;
   letter-spacing: 3px;
-  background: #e46d21;
+  background: green-color;
   padding: 16px 30px;
   color: white;
   font-weight: 900;
   border: 0;
   outline: none;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flat-button:hover {
+  background-color: green-dark-color;
+}
+
+.flat-button:disabled {
+  background: gray-color;
+  color: light-gray-color;
+  cursor: not-allowed;
 }

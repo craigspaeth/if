@@ -1,32 +1,39 @@
-.panel2 {
+.panel5 {
   clearfix();
   margin-bottom: section-margin;
 }
 
-.panel2 header, panel2-graph {
+.panel5 header, panel5-laptop {
   float: left;
 }
 
-.panel2 header {
+.panel5 header {
   width: 50%;
   padding-right: (gutter-size / 2);
 }
 
-.panel2-graph {
+.panel5-laptop {
   width: 50%;
   padding-left: (gutter-size / 2);
+}
+
+.panel5 header .flat-button {
+  display: block;
+  text-align: center;
+  margin-top: 36px;
 }
 
 /* iPhone (portrait) */
 @media (max-width: 667px) {
 
-  .panel2 header {
-    width: 100%;
-  }
-
-  .panel2-graph {
+  .panel5 header {
     width: 100%;
     padding: 0;
+  }
+
+  .panel5-laptop {
+    width: 100%;
+    padding-left: 0;
     margin-top: mobile-gutter-size;
   }
 }
