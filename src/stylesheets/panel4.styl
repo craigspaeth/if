@@ -8,12 +8,12 @@
 }
 
 .panel4 header {
-  width: 50%;
+  width: 38%;
   padding-right: (gutter-size / 2);
 }
 
 .panel4-graph {
-  width: 50%;
+  width: 62%;
   padding-left: (gutter-size / 2);
 }
 
@@ -21,6 +21,18 @@
   display: block;
   text-align: center;
   margin-top: 36px;
+}
+
+/* Hit grid at max size */
+@media (min-width: max-width + (gutter-size * 2)) {
+  
+  .panel4 header {
+    width: (col-width * 3) + (gutter-size * 2);
+  }
+  
+  .panel4-graph {
+    width: (col-width * 5) + (gutter-size * 5)
+  }
 }
 
 /* iPhone (portrait) */

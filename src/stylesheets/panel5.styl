@@ -8,19 +8,35 @@
 }
 
 .panel5 header {
-  width: 50%;
+  width: 38%;
   padding-right: (gutter-size / 2);
 }
 
 .panel5-laptop {
-  width: 50%;
+  width: 68%;
+  margin-left: -6%;
   padding-left: (gutter-size / 2);
+  z-index: -1;
+  position: relative;
 }
 
 .panel5 header .flat-button {
   display: block;
   text-align: center;
   margin-top: 36px;
+}
+
+/* Hit grid at max size */
+@media (min-width: max-width + (gutter-size * 2)) {
+  
+  .panel5 header {
+    width: (col-width * 3) + (gutter-size * 2);
+  }
+  
+  .panel5-laptop {
+    width: (col-width * 5) + (gutter-size * 7);
+    margin-left: -(gutter-size * 2);
+  }
 }
 
 /* iPhone (portrait) */

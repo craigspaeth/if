@@ -10,7 +10,7 @@ $(function() {
     handler: function(dir) {
       if($(window).width() > 768) $('.main-nav').toggleClass('active');
     },
-    offset: $('.main-nav').outerHeight()
+    offset: $('.main-nav').outerHeight() * 2
   });
 });
 
