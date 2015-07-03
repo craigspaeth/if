@@ -362,7 +362,7 @@ a {
 /* Hero Unit */
 .hero-unit {
   background: #000;
-  height: 70vh;
+  height: 80vh;
   position: relative;
 }
 .hero-unit-copy {
