@@ -450,7 +450,6 @@ a {
 }
 .panel1-items {
   zoom: 1;
-  margin-top: 50px;
 }
 .panel1-items:before,
 .panel1-items:after {
@@ -491,6 +490,13 @@ a {
 }
 .panel1-item:nth-child(3) {
   padding-left: 24px;
+}
+.panel1-graph svg {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  -ms-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
 }
 @media (max-width: 667px) {
   .panel1 header {
