@@ -28,7 +28,7 @@
 
 .panel1 header {
   width: (col-width * 4) + (gutter-size * 3);
-  margin: auto;
+  margin: 0 auto gutter-size auto;
   text-align: center;
 }
 
@@ -45,8 +45,21 @@
   padding-left: (gutter-size * 2/3);
 }
 
-.panel1-graph svg {
-  transition: margin-left 0.3s ease-in-out;
+.panel1-dfa-logo {
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: margin-left 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.panel1-dfa-logo.is-slide-out {
+  margin-left: 190px;
+  opacity: 1;
+}
+
+.panel1-dfa-logo img {
+  width: 130px;
 }
 
 /* iPhone (portrait) */

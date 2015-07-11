@@ -14,6 +14,6 @@ $(function() {
   });
 
   // Panel 1 graph
-  setGraph();
+  animateGraph(0);
 });
 
