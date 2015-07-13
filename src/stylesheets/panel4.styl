@@ -3,7 +3,7 @@
   margin-bottom: section-margin;
 }
 
-.panel4 header, panel4-graph {
+.panel4 header, .panel4-graph {
   float: left;
 }
 
@@ -12,24 +12,71 @@
   padding-right: (gutter-size / 2);
 }
 
-.panel4-graph {
-  width: 62%;
-  padding-left: (gutter-size / 2);
-}
-
 .panel4 header .flat-button {
   display: block;
   text-align: center;
   margin-top: 36px;
 }
 
+.panel4-graph {
+  width: 62%;
+  padding-left: (gutter-size / 2);
+}
+
+.panel4-graph.active .panel4-3num,
+.panel4-graph.active .panel4-2num {
+  opacity: 1;
+}
+
+.panel4-graph.active .panel4-radio {
+  transform: scale(1);
+}
+
+.panel4-graph.active .panel4-slider {
+  cx: 302;
+  fill: green-color;
+}
+
+.panel4-graph.active .panel4-radial {
+  opacity: 1;
+}
+
+.panel4-3num, .panel4-2num {
+  opacity: 0;
+  transition: opacity 0s;
+}
+
+.panel4-2num {
+  transition-delay: 0.2s;
+}
+
+.panel4-radio {
+  transform: scale(0);
+  transform-origin: 50%;
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 3.5);
+  transition-delay: 0.7s;
+}
+
+.panel4-slider {
+  cx: 225;
+  transition: cx 0.3s ease-in-out, fill 0.3s ease-in-out;
+  transition-delay: 1.5s;
+  fill: gray-color;
+}
+
+.panel4-radial {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  transition-delay: 2s;
+}
+
 /* Hit grid at max size */
 @media (min-width: max-width + (gutter-size * 2)) {
-  
+
   .panel4 header {
     width: (col-width * 3) + (gutter-size * 2);
   }
-  
+
   .panel4-graph {
     width: (col-width * 5) + (gutter-size * 5)
   }

@@ -17,3 +17,8 @@ Website project for a client
   * TBD
 * Clearfix
   * Search for `clearfix()` in *.styl and replace using main.css as a reference
+
+### Notes
+
+* Fix leading across the board
+* Background gray could go a shade lighter and less saturated

@@ -47,19 +47,32 @@
 
 .panel1-dfa-logo {
   position: absolute;
-  margin-top: -150px;
-  margin-left: 50px;
+  margin-top: -140px;
+  margin-left: 20px;
   opacity: 0;
-  transition: margin-left 0.4s ease-out, opacity 0.4s ease-out;
+  transition: margin-left 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.panel1-dfa-logo.is-slide-out {
-  margin-left: 190px;
+.panel1-dfa-logo.active {
+  margin-left: 150px;
   opacity: 1;
 }
 
-.panel1-dfa-logo img {
-  width: 130px;
+.panel1-graph svg {
+  z-index: 1;
+  position: relative;
+}
+
+.panel1-graph path:nth-child(1),
+.panel1-graph path:nth-child(2),
+.panel1-graph path:nth-child(3) {
+  transition: fill 0.3s ease-out;
+}
+
+.panel1-graph.active path:nth-child(1),
+.panel1-graph.active path:nth-child(2),
+.panel1-graph.active path:nth-child(3) {
+  fill: green-color;
 }
 
 /* iPhone (portrait) */

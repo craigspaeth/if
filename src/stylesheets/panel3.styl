@@ -17,6 +17,32 @@
   padding-right: (gutter-size / 2);
 }
 
+.panel3-items li {
+  position: relative;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940),
+    opacity 0.5s ease-out;
+}
+
+.panel3-items li:nth-child(1) {
+  left: 100px;
+}
+
+.panel3-items li:nth-child(2) {
+  left: 120px;
+  transition-delay: 0.1s;
+}
+
+.panel3-items li:nth-child(3) {
+  left: 140px;
+  transition-delay: 0.2s;
+}
+
+.panel3-items.active li {
+  left: 0;
+  opacity: 1;
+}
+
 .panel3-items img {
   width: 50px;
   float: left;
