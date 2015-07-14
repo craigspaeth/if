@@ -1,17 +1,22 @@
 .panel6 {
   text-align: center;
-  margin-bottom: section-margin;
+  margin: 25vh 0;
 }
 
 .panel6-age {
   border: 0;
-  border-bottom: 2px solid green-color;
+  border-bottom: 2px solid gray-color;
   margin: 0 0 0 3px;
   font-size: vollkorn-headline;
   width: 26px;
   font-family: 'Volkhov', serif;
   outline: none;
   padding-bottom: 5px;
+  color: green-color;
+}
+
+.panel6-age:focus {
+  border-color: green-color;
 }
 
 .panel6 h2 {
@@ -53,4 +58,56 @@
 
 .panel6 .flat-button:not([disabled]):hover {
   background-color: orange-light-color;
+}
+
+.panel6 h1 {
+  margin-bottom: gutter-size;
+}
+
+/* iPhone (portrait) */
+@media (max-width: 667px) {
+
+  .panel6-radios label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: mobile-gutter-size;
+    margin-right: 0 !important;
+  }
+
+  .panel6-radios input {
+    margin-right: 10px;
+  }
+
+  .panel6-radios input, .panel6-radios .small-header {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .panel6-radios small {
+    margin-left: 44px;
+  }
+
+  .panel-content-container h1, .panel-content-container h2 {
+    text-align: left;
+  }
+
+  .panel6 h1 {
+    margin-bottom: 0;
+  }
+
+  .panel6 h2, .panel6-age {
+    font-size: vollkorn-body;
+  }
+
+  .panel6 .flat-button {
+    width: 100%;
+  }
+
+  .panel6-radios {
+    margin: mobile-gutter-size 0;
+  }
+
+  .panel6 {
+    margin: (mobile-gutter-size * 2) 0;
+  }
 }

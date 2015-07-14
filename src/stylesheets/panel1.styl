@@ -14,16 +14,14 @@
   color: darker-gray-color;
 }
 
+.panel1-item > img {
+  display: none;
+}
+
 .panel1-item h3 {
   color: green-color;
   margin: 20px auto 5px auto;
   line-height: 1.4em;
-}
-
-.panel1-item img {
-  position: relative;
-  left: 85px;
-  z-index: 1;
 }
 
 .panel1 header {
@@ -48,13 +46,13 @@
 .panel1-dfa-logo {
   position: absolute;
   margin-top: -140px;
-  margin-left: 20px;
+  margin-left: 100px;
   opacity: 0;
   transition: margin-left 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .panel1-dfa-logo.active {
-  margin-left: 150px;
+  margin-left: 230px;
   opacity: 1;
 }
 
@@ -78,6 +76,10 @@
 /* iPhone (portrait) */
 @media (max-width: 667px) {
 
+  .panel1 {
+    margin-top: 0;
+  }
+
   .panel1 header {
     width: auto;
     text-align: left;
@@ -88,5 +90,13 @@
     float: none;
     text-align: left;
     padding: 0 !important;
+  }
+
+  .panel1-graph {
+    display: none;
+  }
+
+  .panel1-item img {
+    display: block;
   }
 }

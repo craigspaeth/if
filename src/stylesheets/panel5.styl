@@ -49,10 +49,6 @@
   margin-top: 68vh;
 }
 
-.panel5-header:last-child {
-  padding-bottom: 236px;
-}
-
 .panel5-laptop.stuck {
   position: fixed;
   top: 80px;
@@ -69,6 +65,10 @@
 
 .panel5-cta:hover {
   background-color: orange-light-color;
+}
+
+.panel5-header img {
+  display: none;
 }
 
 /* Hit grid at max size */
@@ -96,5 +96,37 @@
     width: 100%;
     padding-left: 0;
     margin-top: mobile-gutter-size;
+  }
+
+  .panel5-laptop {
+    display: none;
+  }
+
+  .panel5-header:not(:first-child) {
+    margin-top: mobile-gutter-size;
+  }
+
+  .panel5-header:first-child {
+    margin-top: 0;
+  }
+
+  .panel5 .flat-button {
+    width: 100%;
+  }
+
+  .panel5 {
+    margin-bottom: 0;
+  }
+
+  .panel5-header img {
+    display: block;
+    margin: mobile-gutter-size 0 (mobile-gutter-size * 3) 0;
+    position: relative;
+    left: -(mobile-gutter-size);
+    height: 300px;
+  }
+
+  .panel5-header img.left {
+    margin-left: -30%;
   }
 }

@@ -70,6 +70,10 @@
   transition-delay: 2s;
 }
 
+.panel4-mobile-graph {
+  display: none;
+}
+
 /* Hit grid at max size */
 @media (min-width: max-width + (gutter-size * 2)) {
 
@@ -94,5 +98,18 @@
     width: 100%;
     padding-left: 0;
     margin-top: mobile-gutter-size;
+  }
+
+  .panel4-graph {
+    display: none;
+  }
+
+  .panel4-mobile-graph {
+    display: block;
+    margin-top: mobile-gutter-size;
+  }
+
+  .panel4 .flat-button {
+    margin: (mobile-gutter-size - 5px) 0 mobile-gutter-size 0 !important;
   }
 }

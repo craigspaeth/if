@@ -24,6 +24,14 @@ $(function() {
     },
     offset: $('.main-nav').outerHeight() + 13
   });
+  var setLastMargin = function() {
+    $('.panel5 header').css({
+      'padding-bottom': ($('.panel5-laptop').height() -
+        $('.panel5-header:last-child').height() + 8)
+    });
+  }
+  $(window).on('resize', _.debounce(setLastMargin, 200));setLastMargin
+  setLastMargin();
 
   // Slide screenshot in laptop
   $('.panel5-header:nth-child(1)').waypoint({

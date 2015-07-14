@@ -40,7 +40,7 @@
       // Slide out slices
       } else if (step == 1) {
         data = _.times(9, function() {
-          return _.random(100, 100);
+          return 100;
         });
         color = function(d, i) {
           if (i == 0) return '#B0B3AB';
@@ -68,13 +68,20 @@
 
       // Shuffle slices
       } else if(step ==4) {
-        var i = _.random(0, 2);
-        data[i] = data[i] * _.random(2, 3);
-        var i = _.random(3, 6);
-        data[i] = data[i] * _.random(2, 3);
-        var i = _.random(7, 10);
-        data[i] = data[i] * _.random(2, 3);
-        animateSlices();
+        _.times(3, function(i) {
+          setTimeout(function() {
+            data = _.times(9, function() {
+              return _.random(20, 100);
+            });
+            animateSlices();
+          }, i * TRANSITION_TIME - 100);
+        });
+        setTimeout(function() {
+          data = _.times(9, function() {
+            return 100;
+          });
+          animateSlices();
+        }, TRANSITION_TIME * 4);
       }
     }
   }

@@ -2,6 +2,7 @@
   background: black;
   height: 80vh;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-unit-copy {
@@ -34,6 +35,13 @@
 
 .hero-unit .flat-button:hover {
   background-color: orange-light-color;
+}
+
+.hero-unit-video video {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  opacity: 0.4;
 }
 
 /* iPad (portrait) */
@@ -73,6 +81,10 @@
 
   .hero-unit-copy .flat-button {
     width: 100%;
+  }
+
+  .hero-unit-video video {
+    display: none;
   }
 }
 

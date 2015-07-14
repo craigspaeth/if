@@ -14,15 +14,28 @@ $(function() {
   });
 
   // Start & stop "unlocked access" animation
-  $('.panel1').waypoint({
-    handler: function(dir) { if (dir == 'down') animatePanel1() },
-    offset: '50%'
-  });
-  $('.panel1').waypoint({
-    handler: function(dir) { if (dir == 'up') animatePanel1() },
-    offset: -$('.panel1').height() / 2
-  });
-  $('.panel2, .hero-unit').waypoint({ handler: resetPanel1 });
+  if($(window).width() > 768) {
+    $('.panel1').waypoint({
+      handler: function(dir) {
+        if (dir != 'down') return;
+        animatePanel1();
+        $('.hero-unit-video video')[0].pause();
+      },
+      offset: '50%'
+    });
+    $('.panel1').waypoint({
+      handler: function(dir) { if (dir == 'up') animatePanel1() },
+      offset: -$('.panel1').height() / 2
+    });
+    $('.panel2, .hero-unit').waypoint({ handler: resetPanel1 });
+    $('.hero-unit-copy').waypoint({
+      handler: function(dir) {
+        if (dir != 'up') return;
+        resetPanel1();
+        $('.hero-unit-video video')[0].play();
+      }
+    });
+  }
 
   // Slide in Sustainable icons
   $('.panel3').waypoint({
@@ -46,7 +59,7 @@ $(function() {
     offset: '50%'
   });
   $('.panel6 :input').on('click change', function() {
-    if ($('.panel6-age').val() && $('.panel6-radios [name=for]').val()) {
+    if ($('.panel6-age').val() && $('.panel6-radios :checked').length) {
       $('.panel6 .flat-button').removeAttr('disabled');
     } else {
       $('.panel6 .flat-button').attr('disabled', 'disabled');
