@@ -1,37 +1,37 @@
 .larger-header {
   font-size: 42px;
-  font-family: 'Lato', sans-serif;
+  font-family: $lato-family;
   font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: lato-letter-spacing;
+  letter-spacing: $lato-letter-spacing;
   line-height: 1.1em;
 }
 
 .large-header {
-  font-size: lato-headline;
-  font-family: 'Lato', sans-serif;
+  font-size: $lato-headline;
+  font-family: $lato-family;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: lato-letter-spacing;
+  letter-spacing: $lato-letter-spacing;
   line-height: 1.2em;
 }
 
 .small-header {
-  font-size: lato-body;
-  font-family: 'Lato', sans-serif;
+  font-size: $lato-body;
+  font-family: $lato-family;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: lato-letter-spacing;
+  letter-spacing: $lato-letter-spacing;
   line-height: 1.2em;
   margin-bottom: 3px;
 }
 
 .flat-button {
-  font-family: 'Lato', sans-serif;
-  font-size: lato-body;
+  font-family: $lato-family;
+  font-size: $lato-body;
   text-transform: uppercase;
-  letter-spacing: lato-letter-spacing;
-  background: green-color;
+  letter-spacing: $lato-letter-spacing;
+  background: $green-color;
   padding: 16px 30px;
   color: white;
   font-weight: 900;
@@ -42,19 +42,19 @@
 }
 
 .flat-button:hover {
-  background-color: green-dark-color;
+  background-color: $green-dark-color;
 }
 
 .flat-button:disabled {
-  background: gray-color;
-  color: light-gray-color;
+  background: $gray-color;
+  color: $light-gray-color;
   cursor: not-allowed;
 }
 
 .flat-radio {
-  border: 3px solid light-gray-color;
+  border: 3px solid $light-gray-color;
   padding: 10px;
-  appearance: none;
+  @include appearance(none);
   border-radius: 20px;
   position: relative;
   outline: none;
@@ -71,7 +71,7 @@
   position: absolute;
   top: 3px;
   left: 3px;
-  background: lighter-gray-color;
+  background: $lighter-gray-color;
   border-radius: 20px;
   height: 0;
   width: 0;
@@ -80,5 +80,5 @@
 
 .flat-radio:checked:after {
   display: block;
-  background: green-color;
+  background: $green-color;
 }

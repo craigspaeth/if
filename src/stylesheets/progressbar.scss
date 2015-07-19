@@ -1,0 +1,49 @@
+.progressbar {
+  max-width: $questionairre-width;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.progressbar-bar {
+  position: relative;
+}
+
+.progressbar-bar-fill {
+  width: 2%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $green-color;
+  transition: width 0.3s ease-in-out;
+}
+
+.progressbar h1, .progressbar-bar-marker {
+  font-family: $lato-family;
+  text-transform: uppercase;
+  letter-spacing: $lato-letter-spacing-small;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $gray-color;
+}
+
+.progressbar h1 {
+  font-size: $lato-body;
+  letter-spacing: $lato-letter-spacing;
+}
+
+.progressbar-bar {
+  width: 100%;
+  background: $light-gray-color;
+  height: 6px;
+  margin: 20px 0;
+  @include clearfix;
+}
+
+.progressbar-bar-marker {
+  width: 25%;
+  display: block;
+  float: left;
+  font-size: $lato-small;
+}

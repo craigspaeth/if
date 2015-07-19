@@ -5,33 +5,33 @@
 
 .panel6-age {
   border: 0;
-  border-bottom: 2px solid gray-color;
+  border-bottom: 2px solid $gray-color;
   margin: 0 0 0 3px;
-  font-size: vollkorn-headline;
+  font-size: $vollkorn-headline;
   width: 26px;
-  font-family: 'Volkhov', serif;
+  font-family: $vollkorn-family;
   outline: none;
   padding-bottom: 5px;
-  color: green-color;
+  color: $green-color;
 }
 
 .panel6-age:focus {
-  border-color: green-color;
+  border-color: $green-color;
 }
 
 .panel6 h2 {
   margin-top: 20px;
-  font-size: vollkorn-headline;
+  font-size: $vollkorn-headline;
 }
 
 .panel6-radios {
   text-align: center;
-  margin: (gutter-size * 2) 0;
+  margin: ($gutter-size * 2) 0;
 }
 
 .panel6-radios label {
   display: inline-block;
-  margin-right: gutter-size;
+  margin-right: $gutter-size;
   text-align: center;
   vertical-align: top;
 }
@@ -46,22 +46,22 @@
 }
 
 .panel6-radios small {
-  font-size: vollkorn-small;
-  color: gray-color;
+  font-size: $vollkorn-small;
+  color: $gray-color;
   display: block;
   font-style: italic;
 }
 
 .panel6 .flat-button:not([disabled]) {
-  background-color: orange-color;
+  background-color: $orange-color;
 }
 
 .panel6 .flat-button:not([disabled]):hover {
-  background-color: orange-light-color;
+  background-color: $orange-light-color;
 }
 
 .panel6 h1 {
-  margin-bottom: gutter-size;
+  margin-bottom: $gutter-size;
 }
 
 /* iPhone (portrait) */
@@ -70,7 +70,7 @@
   .panel6-radios label {
     text-align: left;
     width: 100%;
-    margin-bottom: mobile-gutter-size;
+    margin-bottom: $mobile-gutter-size;
     margin-right: 0 !important;
   }
 
@@ -96,7 +96,7 @@
   }
 
   .panel6 h2, .panel6-age {
-    font-size: vollkorn-body;
+    font-size: $vollkorn-body;
   }
 
   .panel6 .flat-button {
@@ -104,10 +104,10 @@
   }
 
   .panel6-radios {
-    margin: mobile-gutter-size 0;
+    margin: $mobile-gutter-size 0;
   }
 
   .panel6 {
-    margin: (mobile-gutter-size * 2) 0;
+    margin: ($mobile-gutter-size * 2) 0;
   }
 }

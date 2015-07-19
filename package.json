@@ -8,17 +8,18 @@
     "ejs-cli": "^1.0.1",
     "less": "^2.5.1",
     "nib": "^1.1.0",
+    "node-sass": "^3.2.0",
     "nodemon": "^1.3.7",
-    "stylus": "^0.51.1",
     "watch-less": "^0.0.4"
   },
   "devDependencies": {},
   "scripts": {
     "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > index.html",
-    "styl": "stylus src/stylesheets/main.styl -o main.css",
+    "tmpl2": "ejs-cli -O '{\"filename\":\"./src/templates/questionnaire.ejs\"}' src/templates/questionnaire.ejs > questionnaire.html",
+    "css": "node-sass src/stylesheets/main.scss main.css",
     "js": "cat src/javascripts/vendor/*.js > vendor.js & cat src/javascripts/*.js > main.js",
-    "c": "npm run styl & npm run tmpl & npm run js",
-    "w": "nodemon --watch src -e styl,ejs,js --exec 'npm run c'",
+    "c": "npm run css & npm run tmpl & npm run tmpl2 & npm run js",
+    "w": "nodemon --watch src -e scss,ejs,js --exec 'npm run c'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

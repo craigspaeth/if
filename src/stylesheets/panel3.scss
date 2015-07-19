@@ -1,6 +1,6 @@
 .panel3 {
-  clearfix();
-  margin-bottom: section-margin;
+  @include clearfix;;
+  margin-bottom: $section-margin;
 }
 
 .panel3 header, .panel3-items {
@@ -9,12 +9,12 @@
 
 .panel3 header {
   width: 50%;
-  padding-left: (gutter-size / 2);
+  padding-left: ($gutter-size / 2);
 }
 
 .panel3-items {
   width: 50%;
-  padding-right: (gutter-size / 2);
+  padding-right: ($gutter-size / 2);
 }
 
 .panel3-items li {
@@ -50,13 +50,13 @@
 }
 
 .panel3-items li {
-  clearfix();
-  margin-bottom: gutter-size;
+  @include clearfix;;
+  margin-bottom: $gutter-size;
 }
 
 .panel3-items h4 {
-  font-size: vollkorn-small;
-  color: darker-gray-color;
+  font-size: $vollkorn-small;
+  color: $darker-gray-color;
   line-height: 1.3em;
 }
 
@@ -64,7 +64,7 @@
 @media (max-width: 667px) {
 
   .panel3 {
-    margin-bottom: mobile-gutter-size * 2;
+    margin-bottom: $mobile-gutter-size * 2;
   }
 
   .panel3-items {

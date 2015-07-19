@@ -1,8 +1,8 @@
 body {
-  font-family: 'Volkhov', serif;
-  font-size: vollkorn-body;
+  font-family: $vollkorn-family;
+  font-size: $vollkorn-body;
   line-height: 1.4em;
-  color: darkest-gray-color;
+  color: $darkest-gray-color;
 }
 
 body, html {
@@ -11,7 +11,7 @@ body, html {
 }
 
 a {
-  color: darkest-gray-color;
+  color: $darkest-gray-color;
   text-decoration: none;
 }
 

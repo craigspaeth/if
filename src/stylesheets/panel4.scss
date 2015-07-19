@@ -1,6 +1,6 @@
 .panel4 {
-  clearfix();
-  margin-bottom: section-margin;
+  @include clearfix;;
+  margin-bottom: $section-margin;
 }
 
 .panel4 header, .panel4-graph {
@@ -9,7 +9,7 @@
 
 .panel4 header {
   width: 38%;
-  padding-right: (gutter-size / 2);
+  padding-right: ($gutter-size / 2);
 }
 
 .panel4 header .flat-button {
@@ -20,7 +20,7 @@
 
 .panel4-graph {
   width: 62%;
-  padding-left: (gutter-size / 2);
+  padding-left: ($gutter-size / 2);
 }
 
 .panel4-graph.active .panel4-3num,
@@ -34,7 +34,7 @@
 
 .panel4-graph.active .panel4-slider {
   cx: 302;
-  fill: green-color;
+  fill: $green-color;
 }
 
 .panel4-graph.active .panel4-radial {
@@ -61,7 +61,7 @@
   cx: 225;
   transition: cx 0.3s ease-in-out, fill 0.3s ease-in-out;
   transition-delay: 1.5s;
-  fill: gray-color;
+  fill: $gray-color;
 }
 
 .panel4-radial {
@@ -75,14 +75,14 @@
 }
 
 /* Hit grid at max size */
-@media (min-width: max-width + (gutter-size * 2)) {
+@media (min-width: $max-width + ($gutter-size * 2)) {
 
   .panel4 header {
-    width: (col-width * 3) + (gutter-size * 2);
+    width: ($col-width * 3) + ($gutter-size * 2);
   }
 
   .panel4-graph {
-    width: (col-width * 5) + (gutter-size * 5)
+    width: ($col-width * 5) + ($gutter-size * 5)
   }
 }
 
@@ -97,7 +97,7 @@
   .panel4-graph {
     width: 100%;
     padding-left: 0;
-    margin-top: mobile-gutter-size;
+    margin-top: $mobile-gutter-size;
   }
 
   .panel4-graph {
@@ -106,10 +106,10 @@
 
   .panel4-mobile-graph {
     display: block;
-    margin-top: mobile-gutter-size;
+    margin-top: $mobile-gutter-size;
   }
 
   .panel4 .flat-button {
-    margin: (mobile-gutter-size - 5px) 0 mobile-gutter-size 0 !important;
+    margin: ($mobile-gutter-size - 5px) 0 $mobile-gutter-size 0 !important;
   }
 }

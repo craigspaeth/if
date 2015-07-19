@@ -1,6 +1,6 @@
 .main-footer {
   padding: 15px 20px;
-  background: darkest-gray-color;
+  background: $darkest-gray-color;
 }
 
 
@@ -14,9 +14,9 @@
   background: transparent;
   padding: 0;
   margin: 0 15px;
-  color: light-gray-color;
-  font-size: lato-small;
-  letter-spacing: lato-letter-spacing-small;
+  color: $light-gray-color;
+  font-size: $lato-small;
+  letter-spacing: $lato-letter-spacing-small;
 }
 
 .main-footer-right {
@@ -44,14 +44,14 @@
   .main-footer-logo {
     display: block;
     text-align: center;
-    border-bottom: 1px solid darker-gray-color;
+    border-bottom: 1px solid $darker-gray-color;
     margin-bottom: 20px;
     padding-bottom: 10px;
   }
 
   .main-footer-right {
     position: relative;
-    clearfix();
+    @include clearfix;
   }
 
   .main-footer-right .flat-button {
@@ -59,15 +59,15 @@
     margin: 0;
     float: left;
     line-height: 1.3em;
-    margin-bottom: mobile-gutter-size;
+    margin-bottom: $mobile-gutter-size;
   }
 
   .main-footer-right .flat-button:nth-child(2n + 2) {
-    margin-left: mobile-gutter-size;
+    margin-left: $mobile-gutter-size;
   }
 
   .main-footer-right .signup-button, .main-footer-right .login-button {
-    padding: 10px mobile-gutter-size;
+    padding: 10px $mobile-gutter-size;
     text-align: center;
   }
 }

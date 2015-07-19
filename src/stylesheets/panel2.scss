@@ -1,6 +1,6 @@
 .panel2 {
-  clearfix();
-  margin-bottom: section-margin;
+  @include clearfix;;
+  margin-bottom: $section-margin;
 }
 
 .panel2 header, panel2-graph {
@@ -9,12 +9,12 @@
 
 .panel2 header {
   width: 50%;
-  padding-right: (gutter-size / 2);
+  padding-right: ($gutter-size / 2);
 }
 
 .panel2-graph {
   width: 50%;
-  padding-left: (gutter-size / 2);
+  padding-left: ($gutter-size / 2);
 }
 
 /* iPhone (portrait) */
@@ -27,6 +27,6 @@
   .panel2-graph {
     width: 100%;
     padding: 0;
-    margin-top: mobile-gutter-size;
+    margin-top: $mobile-gutter-size;
   }
 }

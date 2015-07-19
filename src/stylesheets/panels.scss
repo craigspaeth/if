@@ -1,7 +1,7 @@
 .panel-content-container {
-  max-width: max-width + (gutter-size * 2);
+  max-width: $max-width + ($gutter-size * 2);
   margin: auto;
-  padding: 0 gutter-size;
+  padding: 0 $gutter-size;
   overflow: hidden;
 }
 
@@ -15,10 +15,10 @@
 }
 
 .panel-gray {
-  background: lightest-gray-color;
+  background: $lightest-gray-color;
   width: 100%;
-  padding: section-margin 0;
-  margin-bottom: section-margin;
+  padding: $section-margin 0;
+  margin-bottom: $section-margin;
 }
 
 /* iPhone (portrait) */
@@ -30,7 +30,7 @@
   }
 
   .panel-content-container {
-    padding: (mobile-gutter-size * 2) mobile-gutter-size !important;
+    padding: ($mobile-gutter-size * 2) $mobile-gutter-size !important;
     margin-bottom: 0 !important;
   }
 }

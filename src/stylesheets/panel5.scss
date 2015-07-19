@@ -1,5 +1,5 @@
 .panel5 {
-  margin-bottom: section-margin;
+  margin-bottom: $section-margin;
 }
 
 .panel5 .panel-content-container {
@@ -8,13 +8,13 @@
 
 .panel5 header {
   width: 38%;
-  padding-right: (gutter-size / 2);
+  padding-right: ($gutter-size / 2);
 }
 
 .panel5-laptop {
   width: 68%;
   margin-left: -6%;
-  padding-left: (gutter-size / 2);
+  padding-left: ($gutter-size / 2);
   z-index: -1;
   position: absolute;
   right: 38px;
@@ -60,11 +60,11 @@
 }
 
 .panel5-cta {
-  background-color: orange-color;
+  background-color: $orange-color;
 }
 
 .panel5-cta:hover {
-  background-color: orange-light-color;
+  background-color: $orange-light-color;
 }
 
 .panel5-header img {
@@ -72,15 +72,15 @@
 }
 
 /* Hit grid at max size */
-@media (min-width: max-width + (gutter-size * 2)) {
+@media (min-width: $max-width + ($gutter-size * 2)) {
 
   .panel5 header {
-    width: (col-width * 3) + (gutter-size * 2);
+    width: ($col-width * 3) + ($gutter-size * 2);
   }
 
   .panel5-laptop {
-    width: ((col-width * 5) + (gutter-size * 7) - 5px);
-    margin-left: -(gutter-size * 2);
+    width: (($col-width * 5) + ($gutter-size * 7) - 5px);
+    margin-left: -($gutter-size * 2);
   }
 }
 
@@ -95,7 +95,7 @@
   .panel5-laptop {
     width: 100%;
     padding-left: 0;
-    margin-top: mobile-gutter-size;
+    margin-top: $mobile-gutter-size;
   }
 
   .panel5-laptop {
@@ -103,7 +103,7 @@
   }
 
   .panel5-header:not(:first-child) {
-    margin-top: mobile-gutter-size;
+    margin-top: $mobile-gutter-size;
   }
 
   .panel5-header:first-child {
@@ -120,9 +120,9 @@
 
   .panel5-header img {
     display: block;
-    margin: mobile-gutter-size 0 (mobile-gutter-size * 3) 0;
+    margin: $mobile-gutter-size 0 ($mobile-gutter-size * 3) 0;
     position: relative;
-    left: -(mobile-gutter-size);
+    left: -($mobile-gutter-size);
     height: 300px;
   }
 
