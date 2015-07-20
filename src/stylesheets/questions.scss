@@ -1,0 +1,75 @@
+.question-label {
+  font-family: $lato-family;
+  font-size: $lato-small-headline;
+  font-weight: bold;
+}
+
+.question-label input {
+  display: block;
+  margin-top: 7px;
+}
+
+.question-label small {
+  font-family: $vollkorn-family;
+  font-size: $vollkorn-small;
+  font-weight: normal;
+  color: $gray-color;
+  line-height: 1.4em;
+  margin-top: 10px;
+  display: block;
+}
+
+.question-label > label {
+  display: block;
+  font-size: $vollkorn-body;
+  font-family: $vollkorn-family;
+  font-weight: normal;
+}
+
+.question-label > label input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+
+.question-label > label input:last-child {
+  margin-top: 15px;
+}
+
+.question-br {
+  height: $gutter-size;
+  display: block;
+}
+
+.question-container {
+  @include clearfix;
+  float: left;
+  width: $questionairre-width;
+}
+
+.question-left, .question-right {
+  float: left;
+}
+
+.question-left {
+  width: 50%;
+  padding: $gutter-size $gutter-size $gutter-size 0;
+}
+
+.question-right {
+  width: 50%;
+  border-left: 1px solid $lighter-gray-color;
+  padding: $gutter-size 0 $gutter-size $gutter-size;
+}
+
+.questionnaire-container {
+  width: $questionairre-width;
+  margin: ($gutter-size * 2) auto 0 auto;
+  overflow: hidden;
+}
+
+.questionnaire-questions {
+  width: $questionairre-width * 5;  
+  @include clearfix;
+}

@@ -4,6 +4,7 @@
   "description": "Website project for a client",
   "main": "index.js",
   "dependencies": {
+    "bourbon": "^4.2.3",
     "ejs": "^2.3.1",
     "ejs-cli": "^1.0.1",
     "less": "^2.5.1",

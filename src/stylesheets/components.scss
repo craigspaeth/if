@@ -26,6 +26,20 @@
   margin-bottom: 3px;
 }
 
+.flat-input {
+  border: 2px solid $light-gray-color;
+  padding: 5px 7px;
+  margin: 0;
+  font-family: $vollkorn-family;
+  font-size: $vollkorn-body;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.flat-input:focus, .flat-input:active {
+  border-color: $green-color;
+}
+
 .flat-button {
   font-family: $lato-family;
   font-size: $lato-body;

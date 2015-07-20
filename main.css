@@ -136,6 +136,18 @@ a {
   line-height: 1.2em;
   margin-bottom: 3px; }
 
+.flat-input {
+  border: 2px solid #B0B3AB;
+  padding: 5px 7px;
+  margin: 0;
+  font-family: "Volkhov" serif;
+  font-size: 17px;
+  outline: none;
+  transition: 0.3s ease-in-out; }
+
+.flat-input:focus, .flat-input:active {
+  border-color: #6EA34E; }
+
 .flat-button {
   font-family: "Lato" sans-serif;
   font-size: 14px;
@@ -907,7 +919,7 @@ a {
 .progressbar {
   max-width: 720px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 40px;
   text-align: center; }
 
 .progressbar-bar {
@@ -951,6 +963,92 @@ a {
   font-size: 12px; }
 
 .nextback {
-  position: fixed;
-  bottom: 200px;
+  position: absolute;
+  bottom: 80px;
+  width: 720px;
+  left: calc(50% - 360px); }
+
+.nextback-back button {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  color: #808580;
+  background: left center url(images/backarrow.svg) no-repeat;
+  background-size: 16px; }
+
+.nextback-back button:hover {
+  background-color: transparent; }
+
+.nextback-next button {
+  position: absolute;
+  right: calc(50% - 75px);
+  width: 150px; }
+
+.question-label {
+  font-family: "Lato" sans-serif;
+  font-size: 19px;
+  font-weight: bold; }
+
+.question-label input {
+  display: block;
+  margin-top: 7px; }
+
+.question-label small {
+  font-family: "Volkhov" serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #808580;
+  line-height: 1.4em;
+  margin-top: 10px;
+  display: block; }
+
+.question-label > label {
+  display: block;
+  font-size: 17px;
+  font-family: "Volkhov" serif;
+  font-weight: normal; }
+
+.question-label > label input {
+  display: inline-block;
+  margin: 0;
+  vertical-align: bottom;
+  margin-right: 5px; }
+
+.question-label > label input:last-child {
+  margin-top: 15px; }
+
+.question-br {
+  height: 36px;
+  display: block; }
+
+.question-container {
+  float: left;
   width: 720px; }
+  .question-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.question-left, .question-right {
+  float: left; }
+
+.question-left {
+  width: 50%;
+  padding: 36px 36px 36px 0; }
+
+.question-right {
+  width: 50%;
+  border-left: 1px solid #D0D2CC;
+  padding: 36px 0 36px 36px; }
+
+.questionnaire-container {
+  width: 720px;
+  margin: 72px auto 0 auto;
+  overflow: hidden; }
+
+.questionnaire-questions {
+  width: 3600px; }
+  .questionnaire-questions::after {
+    clear: both;
+    content: "";
+    display: table; }

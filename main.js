@@ -1,4 +1,4 @@
-$(function() {
+var home = function() {
 
   // Toggle hamburger menu
   $('.main-nav-hamburger').click(function() {
@@ -65,8 +65,14 @@ $(function() {
       $('.panel6 .flat-button').attr('disabled', 'disabled');
     }
   });
+}
+$(function (){
+  if (location.pathname.match('questionnaire')) {
+    questionnaire();
+  } else {
+    home();
+  }  
 });
-
 (function() {
   var GUTTER_SIZE = 36;
   var TRANSITION_TIME = 500;
@@ -265,4 +271,15 @@ var stickLaptop = function() {
 	  ($('.panel5-laptop').offset().left + $('.panel5-laptop').outerWidth());
 	$('.panel5-laptop').removeClass('bottom').css({ right: right })
     .addClass('stuck');
+};var margin = 0;
+
+var questionnaire = function() {
+  $('.nextback-next button').click(function() {
+    margin -= $('.questionnaire-container').width();
+    $('.questionnaire-questions').animate({ 'margin-left': margin }, 'easeInOut');
+  });
+  $('.nextback-back button').click(function() {
+    margin += $('.questionnaire-container').width();
+    $('.questionnaire-questions').animate({ 'margin-left': margin }, 'easeInOut');
+  });
 }

@@ -1,5 +1,25 @@
 .nextback {
-  position: fixed;
-  bottom: 200px;
+  position: absolute;
+  bottom: 80px;
   width: $questionairre-width;
+  left: calc(50% - #{$questionairre-width / 2});
+}
+
+.nextback-back button {
+  position: absolute;
+  left: 0;
+  background: transparent;
+  color: $gray-color;
+  background: left center url(images/backarrow.svg) no-repeat;
+  background-size: 16px;
+}
+
+.nextback-back button:hover {
+  background-color: transparent;
+}
+
+.nextback-next button {
+  position: absolute;
+  right: calc(50% - 75px);
+  width: 150px;
 }

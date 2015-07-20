@@ -17,6 +17,7 @@ $lato-family: 'Lato' sans-serif;
 $vollkorn-family: 'Volkhov' serif;
 $lato-small: 12px;
 $lato-body: 14px;
+$lato-small-headline: 19px;
 $lato-headline: 28px;
 $lato-large-headline: 48px;
 $vollkorn-headline: 21px;
@@ -62,3 +63,4 @@ $questionairre-width: 720px;
 /* Questionairre */
 @import 'progressbar';
 @import 'nextback';
+@import 'questions';
