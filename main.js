@@ -277,7 +277,7 @@ var stickLaptop = function() {
   var slide = 0;
 
   window.questionnaire = function() {
-    
+
     // Clicking back and forth slides between questions
     $('.nextback-next button').click(next);
     $('.nextback-back button').click(back);
@@ -285,8 +285,6 @@ var stickLaptop = function() {
 
     // Upon filling in inputs of active question toggle disabled next button
     $(':input').on('change keyup', toggleNextButton);
-
-    next();next();
   }
 
   var next = function() {
@@ -335,11 +333,11 @@ var stickLaptop = function() {
       'margin-left': margin
     }, 'easeInOut', function() {
       $('.question' + (slide + 1) + ' :input').first().focus();
-    });    
+    });
   }
 
   var toggleBackButton = function() {
     if (slide == 0) $('.nextback-back button').hide();
-    if (slide > 0) $('.nextback-back button').show();  
+    if (slide > 0) $('.nextback-back button').show();
   }
 })();
