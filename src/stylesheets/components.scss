@@ -96,3 +96,21 @@
   display: block;
   background: $green-color;
 }
+
+.money-label {
+  display: block;
+  position: relative;
+}
+
+.money-label:before {
+  content: '$';
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  font-family: $vollkorn-family;
+  font-size: $vollkorn-body;
+}
+
+.money-label input {
+  padding-left: 23px;
+}

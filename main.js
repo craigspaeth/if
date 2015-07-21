@@ -1,71 +1,73 @@
-var home = function() {
+(function() {
+  window.home = function() {
 
-  // Toggle hamburger menu
-  $('.main-nav-hamburger').click(function() {
-    $('.main-nav').toggleClass('active');
-  });
+    // Toggle hamburger menu
+    $('.main-nav-hamburger').click(function() {
+      $('.main-nav').toggleClass('active');
+    });
 
-  // Toggle class of header
-  $('.panel1').waypoint({
-    handler: function(dir) {
-      if($(window).width() > 768) $('.main-nav').toggleClass('active');
-    },
-    offset: $('.main-nav').outerHeight() * 2
-  });
-
-  // Start & stop "unlocked access" animation
-  if($(window).width() > 768) {
+    // Toggle class of header
     $('.panel1').waypoint({
       handler: function(dir) {
-        if (dir != 'down') return;
-        animatePanel1();
-        $('.hero-unit-video video')[0].pause();
+        if($(window).width() > 768) $('.main-nav').toggleClass('active');
       },
+      offset: $('.main-nav').outerHeight() * 2
+    });
+
+    // Start & stop "unlocked access" animation
+    if($(window).width() > 768) {
+      $('.panel1').waypoint({
+        handler: function(dir) {
+          if (dir != 'down') return;
+          animatePanel1();
+          $('.hero-unit-video video')[0].pause();
+        },
+        offset: '50%'
+      });
+      $('.panel1').waypoint({
+        handler: function(dir) { if (dir == 'up') animatePanel1() },
+        offset: -$('.panel1').height() / 2
+      });
+      $('.panel2, .hero-unit').waypoint({ handler: resetPanel1 });
+      $('.hero-unit-copy').waypoint({
+        handler: function(dir) {
+          if (dir != 'up') return;
+          resetPanel1();
+          $('.hero-unit-video video')[0].play();
+        }
+      });
+    }
+
+    // Slide in Sustainable icons
+    $('.panel3').waypoint({
+      handler: function(dir) { $('.panel3-items').addClass('active') },
       offset: '50%'
     });
-    $('.panel1').waypoint({
-      handler: function(dir) { if (dir == 'up') animatePanel1() },
-      offset: -$('.panel1').height() / 2
-    });
-    $('.panel2, .hero-unit').waypoint({ handler: resetPanel1 });
-    $('.hero-unit-copy').waypoint({
+
+    // Animate portfolio graphic
+    $('.panel4').waypoint({
       handler: function(dir) {
-        if (dir != 'up') return;
-        resetPanel1();
-        $('.hero-unit-video video')[0].play();
+        setTimeout(function() {
+          $('.panel4-graph').addClass('active');
+        }, 500);
+      },
+      offset: '20%'
+    });
+
+    // Focus on input & toggle button for build a portfolio
+    $('.panel6').waypoint({
+      handler: function() { $('.panel6-age').focus(); },
+      offset: '50%'
+    });
+    $('.panel6 :input').on('click change', function() {
+      if ($('.panel6-age').val() && $('.panel6-radios :checked').length) {
+        $('.panel6 .flat-button').removeAttr('disabled');
+      } else {
+        $('.panel6 .flat-button').attr('disabled', 'disabled');
       }
     });
-  }
-
-  // Slide in Sustainable icons
-  $('.panel3').waypoint({
-    handler: function(dir) { $('.panel3-items').addClass('active') },
-    offset: '50%'
-  });
-
-  // Animate portfolio graphic
-  $('.panel4').waypoint({
-    handler: function(dir) {
-      setTimeout(function() {
-        $('.panel4-graph').addClass('active');
-      }, 500);
-    },
-    offset: '20%'
-  });
-
-  // Focus on input & toggle button for build a portfolio
-  $('.panel6').waypoint({
-    handler: function() { $('.panel6-age').focus(); },
-    offset: '50%'
-  });
-  $('.panel6 :input').on('click change', function() {
-    if ($('.panel6-age').val() && $('.panel6-radios :checked').length) {
-      $('.panel6 .flat-button').removeAttr('disabled');
-    } else {
-      $('.panel6 .flat-button').attr('disabled', 'disabled');
-    }
-  });
-}
+  };
+})();
 $(function (){
   if (location.pathname.match('questionnaire')) {
     questionnaire();
@@ -271,15 +273,73 @@ var stickLaptop = function() {
 	  ($('.panel5-laptop').offset().left + $('.panel5-laptop').outerWidth());
 	$('.panel5-laptop').removeClass('bottom').css({ right: right })
     .addClass('stuck');
-};var margin = 0;
+};(function() {
+  var slide = 0;
 
-var questionnaire = function() {
-  $('.nextback-next button').click(function() {
-    margin -= $('.questionnaire-container').width();
-    $('.questionnaire-questions').animate({ 'margin-left': margin }, 'easeInOut');
-  });
-  $('.nextback-back button').click(function() {
-    margin += $('.questionnaire-container').width();
-    $('.questionnaire-questions').animate({ 'margin-left': margin }, 'easeInOut');
-  });
-}
+  window.questionnaire = function() {
+    
+    // Clicking back and forth slides between questions
+    $('.nextback-next button').click(next);
+    $('.nextback-back button').click(back);
+    $('input:first').focus();
+
+    // Upon filling in inputs of active question toggle disabled next button
+    $(':input').on('change keyup', toggleNextButton);
+
+    next();next();
+  }
+
+  var next = function() {
+    slide++;
+    toggleNextButton();
+    animateSlide();
+    animateProgressbar();
+    toggleBackButton();
+  }
+
+  var back = function() {
+    slide--;
+    animateSlide();
+    animateProgressbar();
+    toggleBackButton();
+  }
+
+  var inputsFilled = function () {
+    return $('.question' + (slide + 1) + ' :input').map(function() {
+      if ($(this).is('[type=radio]')) {
+        return $('[name=' + $(this).attr('name') + ']:checked').length > 0;
+      } else {
+        return $(this).val() != '';
+      }
+    }).toArray().indexOf(false) == -1;
+  }
+
+  var toggleNextButton = function() {
+    $('.nextback-next button').attr('disabled', !inputsFilled());
+  }
+
+  var animateProgressbar = function() {
+    var width;
+    if (slide == 0) width = '2%';
+    if (slide == 1) width = '25%';
+    if (slide == 2) width = '50%';
+    if (slide == 3) width = '62.5%';
+    if (slide == 4) width = '75%';
+    if (slide == 5) width = '100%';
+    $('.progressbar-bar-fill').animate({ width: width }, 'easeInOut');
+  }
+
+  var animateSlide = function() {
+    margin = -slide * $('.questionnaire-container').width();
+    $('.questionnaire-questions').animate({
+      'margin-left': margin
+    }, 'easeInOut', function() {
+      $('.question' + (slide + 1) + ' :input').first().focus();
+    });    
+  }
+
+  var toggleBackButton = function() {
+    if (slide == 0) $('.nextback-back button').hide();
+    if (slide > 0) $('.nextback-back button').show();  
+  }
+})();

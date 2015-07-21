@@ -1,3 +1,10 @@
+.questionnaire-logomark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 35px;
+}
+
 .question-label {
   font-family: $lato-family;
   font-size: $lato-small-headline;
@@ -9,7 +16,7 @@
   margin-top: 7px;
 }
 
-.question-label small {
+.question-small {
   font-family: $vollkorn-family;
   font-size: $vollkorn-small;
   font-weight: normal;
@@ -54,13 +61,17 @@
 
 .question-left {
   width: 50%;
-  padding: $gutter-size $gutter-size $gutter-size 0;
+  padding-right: $gutter-size;
 }
 
 .question-right {
   width: 50%;
   border-left: 1px solid $lighter-gray-color;
-  padding: $gutter-size 0 $gutter-size $gutter-size;
+  padding-left: $gutter-size;
+}
+
+.question-full {
+  margin-top: $gutter-size;
 }
 
 .questionnaire-container {
@@ -72,4 +83,37 @@
 .questionnaire-questions {
   width: $questionairre-width * 5;  
   @include clearfix;
+}
+
+.question4-table {
+  margin: 20px 0 $gutter-size 0;
+}
+
+.question4-table th, .question4-table td {
+  padding: 5px 30px 5px 0;
+}
+
+.question4-table td:first-child {
+  border-top: 0;
+}
+
+.question4-table td:last-child {
+  padding-right: 0;
+}
+
+.question4-table th {
+  font-family: $lato-family;
+  font-size: $lato-small;
+  text-transform: uppercase;
+  letter-spacing: $lato-letter-spacing-small;
+  font-weight: bold;
+}
+
+.question4-table td {
+  border-top: 1px solid $lighter-gray-color;
+}
+
+.question4-table td:last-child {
+  font-style: italic;
+  color: $gray-color;
 }

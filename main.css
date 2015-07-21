@@ -202,6 +202,21 @@ a {
   display: block;
   background: #6EA34E; }
 
+.money-label {
+  display: block;
+  position: relative; }
+
+.money-label:before {
+  content: '$';
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  font-family: "Volkhov" serif;
+  font-size: 17px; }
+
+.money-label input {
+  padding-left: 23px; }
+
 /* Main navigation */
 .main-nav {
   position: fixed;
@@ -931,8 +946,7 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  background: #6EA34E;
-  transition: width 0.3s ease-in-out; }
+  background: #6EA34E; }
 
 .progressbar h1, .progressbar-bar-marker {
   font-family: "Lato" sans-serif;
@@ -963,10 +977,9 @@ a {
   font-size: 12px; }
 
 .nextback {
-  position: absolute;
-  bottom: 80px;
   width: 720px;
-  left: calc(50% - 360px); }
+  margin: auto;
+  position: relative; }
 
 .nextback-back button {
   position: absolute;
@@ -974,7 +987,8 @@ a {
   background: transparent;
   color: #808580;
   background: left center url(images/backarrow.svg) no-repeat;
-  background-size: 16px; }
+  background-size: 16px;
+  display: none; }
 
 .nextback-back button:hover {
   background-color: transparent; }
@@ -983,6 +997,12 @@ a {
   position: absolute;
   right: calc(50% - 75px);
   width: 150px; }
+
+.questionnaire-logomark {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 35px; }
 
 .question-label {
   font-family: "Lato" sans-serif;
@@ -993,7 +1013,7 @@ a {
   display: block;
   margin-top: 7px; }
 
-.question-label small {
+.question-small {
   font-family: "Volkhov" serif;
   font-size: 15px;
   font-weight: normal;
@@ -1034,12 +1054,15 @@ a {
 
 .question-left {
   width: 50%;
-  padding: 36px 36px 36px 0; }
+  padding-right: 36px; }
 
 .question-right {
   width: 50%;
   border-left: 1px solid #D0D2CC;
-  padding: 36px 0 36px 36px; }
+  padding-left: 36px; }
+
+.question-full {
+  margin-top: 36px; }
 
 .questionnaire-container {
   width: 720px;
@@ -1052,3 +1075,29 @@ a {
     clear: both;
     content: "";
     display: table; }
+
+.question4-table {
+  margin: 20px 0 36px 0; }
+
+.question4-table th, .question4-table td {
+  padding: 5px 30px 5px 0; }
+
+.question4-table td:first-child {
+  border-top: 0; }
+
+.question4-table td:last-child {
+  padding-right: 0; }
+
+.question4-table th {
+  font-family: "Lato" sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold; }
+
+.question4-table td {
+  border-top: 1px solid #D0D2CC; }
+
+.question4-table td:last-child {
+  font-style: italic;
+  color: #808580; }

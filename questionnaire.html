@@ -12,6 +12,10 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900|Volkhov:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
   <body>
+    <!-- Logo -->
+    <a href='/'>
+      <img src='images/logomark.svg' class='questionnaire-logomark'>
+    </a>
     <!-- Progressbar -->
     <section class='progressbar'>
   <h1>Personalize Your Portfolio</h1>
@@ -68,20 +72,20 @@
   </div>
 </div>        <div class='question2 question-container'>
   <div class='question-left'>
-    <label class='question-label'>
+    <label class='question-label money-label'>
       Annual income?
-      <input class='flat-input' size='3'>
+      <input class='flat-input' size='10'>
     </label>
     <br class='question-br'>
-    <label class='question-label'>
+    <label class='question-label money-label'>
       Value of current investments?
-      <input class='flat-input' size='3'>
-      <small>
-        (Optional) The current value of you cash and liquid investments? (e.g. savings, CDs, stocks, bonds, mutual funds, IRAs and 401(k)s)
-      </small>
+      <input class='flat-input' size='10'>
     </label>
+    <small class='question-small'>
+      (Optional) The current value of you cash and liquid investments? (e.g. savings, CDs, stocks, bonds, mutual funds, IRAs and 401(k)s)
+    </small>
   </div>
-</div>        <div class='question1 question-container'>
+</div>        <div class='question3 question-container'>
   <div class='question-left'>
     <label class='question-label'>
       I am most concerned about my investments...
@@ -120,13 +124,69 @@
       </label>
     </label>
   </div>
-</div>        <div class='question1 question-container'>
-  <div class='question-left'>
+</div>        <div class='question4 question-container'>
+  <div class='question-middle'>
     <label class='question-label'>
       Choose the most appealing investment scenario:
     </label>
+    <table class='question4-table'>
+      <tbody>
+        <tr>
+          <th></th>
+          <th>Worst Case</th>
+          <th>Average</th>
+          <th>Best Case</th>
+          <th>Summary</th>
+        </tr>
+        <tr>
+          <td>
+            <input type='radio' name='risk-level' class='flat-radio' value='0'>
+          </td>
+          <td>-6%</td>
+          <td>7%</td>
+          <td>16%</td>
+          <td>Very Conservative</td>
+        </tr>
+        <tr>
+          <td>
+            <input type='radio' name='risk-level' class='flat-radio' value='1'>
+          </td>
+          <td>-12%</td>
+          <td>9%</td>
+          <td>21%</td>
+          <td>Conservative</td>
+        </tr>
+        <tr>
+          <td>
+            <input type='radio' name='risk-level' class='flat-radio' value='2'>
+          </td>
+          <td>-14%</td>
+          <td>10%</td>
+          <td>31%</td>
+          <td>Somewhat Aggressive</td>
+        </tr>
+        <tr>
+          <td>
+            <input type='radio' name='risk-level' class='flat-radio' value='3'>
+          </td>
+          <td>-19%</td>
+          <td>11%</td>
+          <td>42%</td>
+          <td>Aggressive</td>
+        </tr>
+        <tr>
+          <td>
+            <input type='radio' name='risk-level' class='flat-radio' value='4'>
+          </td>
+          <td>-28%</td>
+          <td>13%</td>
+          <td>50%</td>
+          <td>Very Aggressive</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</div>        <div class='question1 question-container'>
+</div>        <div class='question5 question-container'>
   <label class='question-label'>
     Are you interested in incorporating environmentally sustainable screened investments?
     <small>
@@ -153,7 +213,7 @@
     <button class='flat-button'>Back</button>
   </div>
   <div class='nextback-next'>
-    <button class='flat-button'>Next</button>
+    <button class='flat-button' disabled>Next</button>
   </div>
 </footer>    <!-- Javascripts -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

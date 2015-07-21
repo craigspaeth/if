@@ -66,4 +66,4 @@ var stickLaptop = function() {
 	  ($('.panel5-laptop').offset().left + $('.panel5-laptop').outerWidth());
 	$('.panel5-laptop').removeClass('bottom').css({ right: right })
     .addClass('stuck');
-}
+};
