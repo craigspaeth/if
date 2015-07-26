@@ -1,6 +1,7 @@
 .hero-unit {
   background: black;
-  height: 80vh;
+  height: 56vw;
+  max-height: 85vh;
   position: relative;
   overflow: hidden;
 }
@@ -41,7 +42,7 @@
   min-height: 100%;
   min-width: 100%;
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 /* iPad (portrait) */

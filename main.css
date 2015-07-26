@@ -389,7 +389,8 @@ a {
 /* Hero Unit */
 .hero-unit {
   background: black;
-  height: 80vh;
+  height: 56vw;
+  max-height: 85vh;
   position: relative;
   overflow: hidden; }
 
@@ -424,7 +425,7 @@ a {
   min-height: 100%;
   min-width: 100%;
   position: absolute;
-  opacity: 0.4; }
+  opacity: 0.55; }
 
 /* iPad (portrait) */
 @media (max-width: 768px) {
@@ -929,175 +930,3 @@ a {
     margin: 20px 0; }
   .panel6 {
     margin: 40px 0; } }
-
-/* Questionairre */
-.progressbar {
-  max-width: 720px;
-  margin: auto;
-  margin-top: 40px;
-  text-align: center; }
-
-.progressbar-bar {
-  position: relative; }
-
-.progressbar-bar-fill {
-  width: 2%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #6EA34E; }
-
-.progressbar h1, .progressbar-bar-marker {
-  font-family: "Lato" sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #808580; }
-
-.progressbar h1 {
-  font-size: 14px;
-  letter-spacing: 2px; }
-
-.progressbar-bar {
-  width: 100%;
-  background: #B0B3AB;
-  height: 6px;
-  margin: 20px 0; }
-  .progressbar-bar::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.progressbar-bar-marker {
-  width: 25%;
-  display: block;
-  float: left;
-  font-size: 12px; }
-
-.nextback {
-  width: 720px;
-  margin: auto;
-  position: relative; }
-
-.nextback-back button {
-  position: absolute;
-  left: 0;
-  background: transparent;
-  color: #808580;
-  background: left center url(images/backarrow.svg) no-repeat;
-  background-size: 16px;
-  display: none; }
-
-.nextback-back button:hover {
-  background-color: transparent; }
-
-.nextback-next button {
-  position: absolute;
-  right: calc(50% - 75px);
-  width: 150px; }
-
-.questionnaire-logomark {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 35px; }
-
-.question-label {
-  font-family: "Lato" sans-serif;
-  font-size: 19px;
-  font-weight: bold; }
-
-.question-label input {
-  display: block;
-  margin-top: 7px; }
-
-.question-small {
-  font-family: "Volkhov" serif;
-  font-size: 15px;
-  font-weight: normal;
-  color: #808580;
-  line-height: 1.4em;
-  margin-top: 10px;
-  display: block; }
-
-.question-label > label {
-  display: block;
-  font-size: 17px;
-  font-family: "Volkhov" serif;
-  font-weight: normal; }
-
-.question-label > label input {
-  display: inline-block;
-  margin: 0;
-  vertical-align: bottom;
-  margin-right: 5px; }
-
-.question-label > label input:last-child {
-  margin-top: 15px; }
-
-.question-br {
-  height: 36px;
-  display: block; }
-
-.question-container {
-  float: left;
-  width: 720px; }
-  .question-container::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.question-left, .question-right {
-  float: left; }
-
-.question-left {
-  width: 50%;
-  padding-right: 36px; }
-
-.question-right {
-  width: 50%;
-  border-left: 1px solid #D0D2CC;
-  padding-left: 36px; }
-
-.question-full {
-  margin-top: 36px; }
-
-.questionnaire-container {
-  width: 720px;
-  margin: 72px auto 0 auto;
-  overflow: hidden; }
-
-.questionnaire-questions {
-  width: 3600px; }
-  .questionnaire-questions::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.question4-table {
-  margin: 20px 0 36px 0; }
-
-.question4-table th, .question4-table td {
-  padding: 5px 30px 5px 0; }
-
-.question4-table td:first-child {
-  border-top: 0; }
-
-.question4-table td:last-child {
-  padding-right: 0; }
-
-.question4-table th {
-  font-family: "Lato" sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold; }
-
-.question4-table td {
-  border-top: 1px solid #D0D2CC; }
-
-.question4-table td:last-child {
-  font-style: italic;
-  color: #808580; }

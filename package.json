@@ -16,10 +16,9 @@
   "devDependencies": {},
   "scripts": {
     "tmpl": "ejs-cli -O '{\"filename\":\"./src/templates/index.ejs\"}' src/templates/index.ejs > index.html",
-    "tmpl2": "ejs-cli -O '{\"filename\":\"./src/templates/questionnaire.ejs\"}' src/templates/questionnaire.ejs > questionnaire.html",
     "css": "node-sass src/stylesheets/main.scss main.css",
     "js": "cat src/javascripts/vendor/*.js > vendor.js & cat src/javascripts/*.js > main.js",
-    "c": "npm run css & npm run tmpl & npm run tmpl2 & npm run js",
+    "c": "npm run css & npm run tmpl & npm run js",
     "w": "nodemon --watch src -e scss,ejs,js --exec 'npm run c'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
