@@ -422,8 +422,7 @@ a {
   background-color: #ed6f29; }
 
 .hero-unit-video video {
-  min-height: 100%;
-  min-width: 100%;
+  width: 100%;
   position: absolute;
   opacity: 0.55; }
 
