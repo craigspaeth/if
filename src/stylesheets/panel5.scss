@@ -104,6 +104,7 @@
 
   .panel5-header:not(:first-child) {
     margin-top: $mobile-gutter-size;
+    min-height: 50vh;
   }
 
   .panel5-header:first-child {

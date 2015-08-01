@@ -1,7 +1,6 @@
 (function() {
   var GUTTER_SIZE = 36;
   var TRANSITION_TIME = 500;
-  var panelWidth = $('.panel1-item').width();
 
   // Config
   var width = 160;
@@ -32,7 +31,7 @@
       if (step == 0) {
         data = [1000000,1,1,1,1,1,1,1,1,1];
         color = function() { return '#B0B3AB' };
-        left = Math.round(panelWidth / 2 - $svg.width() / 2);
+        left = Math.round($('.panel1-item').width() / 2 - $svg.width() / 2);
         $('.panel1-dfa-logo, .panel1-graph').removeClass('active');
         $svg.animate({ 'margin-left': left }, 700, 'easeInOutCubic');
         animateSlices();
@@ -51,7 +50,7 @@
 
       // Slide over and show DFA
       } else if (step == 2) {
-        left = Math.round(panelWidth + (panelWidth / 2) -
+        left = Math.round($('.panel1-item').width() + ($('.panel1-item').width() / 2) -
           $svg.width() / 2) + GUTTER_SIZE;
         $svg.animate({
           'margin-left': left
@@ -62,7 +61,7 @@
       // Hide DFA and slide over
       } else if (step == 3) {
         $('.panel1-dfa-logo, .panel1-graph').removeClass('active');
-        left = Math.round((panelWidth * 2) + (panelWidth / 2) -
+        left = Math.round(($('.panel1-item').width() * 2) + ($('.panel1-item').width() / 2) -
           $svg.width() / 2) + GUTTER_SIZE * 2;
         $svg.animate({ 'margin-left': left }, 700, 'easeInOutCubic');
 

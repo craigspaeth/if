@@ -46,13 +46,13 @@
 .panel1-dfa-logo {
   position: absolute;
   margin-top: -140px;
-  margin-left: 100px;
+  left: calc(50% - 30px);
   opacity: 0;
-  transition: margin-left 0.3s ease-out, opacity 0.3s ease-out;
+  transition: left 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .panel1-dfa-logo.active {
-  margin-left: 230px;
+  left: calc(50% + 55px);
   opacity: 1;
 }
 

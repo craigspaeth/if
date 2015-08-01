@@ -30,8 +30,14 @@ $(function() {
         $('.panel5-header:last-child').height() + 8)
     });
   }
-  $(window).on('resize', _.debounce(setLastMargin, 200));setLastMargin
-  setLastMargin();
+  $(window).on('resize', _.debounce(function() {
+    if ($(window).width() < HAMBURGER_BREAKPOINT) {
+      $('.panel5 header').css({ 'padding-bottom': 0 });
+    } else {
+      setLastMargin();
+    }
+  }, 200));
+  $('.panel5-laptop img').on('load', setLastMargin);
 
   // Slide screenshot in laptop
   $('.panel5-header:nth-child(1)').waypoint({
