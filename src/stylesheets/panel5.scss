@@ -12,9 +12,7 @@
 }
 
 .panel5-laptop {
-  width: 68%;
-  margin-left: -6%;
-  padding-left: ($gutter-size / 2);
+  width: calc(62% - #{$gutter-size});
   z-index: -1;
   position: absolute;
   right: 38px;
@@ -77,11 +75,6 @@
   .panel5 header {
     width: ($col-width * 3) + ($gutter-size * 2);
   }
-
-  .panel5-laptop {
-    width: (($col-width * 5) + ($gutter-size * 7) - 5px);
-    margin-left: -($gutter-size * 2);
-  }
 }
 
 /* iPhone (portrait) */
@@ -124,10 +117,10 @@
     margin: $mobile-gutter-size 0 ($mobile-gutter-size * 3) 0;
     position: relative;
     left: -($mobile-gutter-size);
-    height: 300px;
+    width: 130%;
   }
 
   .panel5-header img.left {
-    margin-left: -30%;
+    margin-left: -24%;
   }
 }

@@ -3,6 +3,9 @@ MOBILE_BREAKPOINT = 768;
 
 $(function() {
 
+  // Add user agent to HTML for cross-browser CSS
+  $('html').attr('data-ua', navigator.userAgent);
+
   // Toggle hamburger menu
   $('.main-nav-hamburger').click(function() {
     $('.main-nav').toggleClass('active');
@@ -250,7 +253,7 @@ $(function() {
       setLastMargin();
     }
   }, 200));
-  $('.panel5-laptop img').on('load', setLastMargin);
+  imagesLoaded($('.panel5-laptop img')[0], setLastMargin);
 
   // Slide screenshot in laptop
   $('.panel5-header:nth-child(1)').waypoint({
@@ -283,6 +286,8 @@ var stickLaptop = function() {
 	if ($('.panel5-laptop').hasClass('fixed')) return;
 	var right = $(window).width() -
 	  ($('.panel5-laptop').offset().left + $('.panel5-laptop').outerWidth());
-	$('.panel5-laptop').removeClass('bottom').css({ right: right })
-    .addClass('stuck');
+	$('.panel5-laptop').removeClass('bottom').css({
+    right: right,
+    width: $('.panel5-laptop').width()
+  }).addClass('stuck');
 };

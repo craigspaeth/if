@@ -68,11 +68,12 @@
 .flat-radio {
   border: 3px solid $light-gray-color;
   padding: 10px;
-  @include appearance(none);
+  -webkit-appearance: none;
   border-radius: 20px;
   position: relative;
   outline: none;
 }
+
 
 .flat-radio:hover:after {
   display: block;

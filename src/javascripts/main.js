@@ -3,6 +3,9 @@ MOBILE_BREAKPOINT = 768;
 
 $(function() {
 
+  // Add user agent to HTML for cross-browser CSS
+  $('html').attr('data-ua', navigator.userAgent);
+
   // Toggle hamburger menu
   $('.main-nav-hamburger').click(function() {
     $('.main-nav').toggleClass('active');

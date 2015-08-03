@@ -113,3 +113,10 @@
     margin: ($mobile-gutter-size - 5px) 0 $mobile-gutter-size 0 !important;
   }
 }
+
+html[data-ua*=Firefox] {
+  .panel4-graph circle {
+    transform-origin: 0 0;
+    transition: none;
+  }
+}

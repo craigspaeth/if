@@ -174,10 +174,6 @@ a {
   border: 3px solid #B0B3AB;
   padding: 10px;
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
   border-radius: 20px;
   position: relative;
   outline: none; }
@@ -441,7 +437,9 @@ a {
 /* iPad (portrait) */
 @media (max-width: 768px) {
   .hero-unit {
-    height: auto; }
+    height: auto;
+    background: url(images/mobilebg.jpg) left center;
+    background-size: cover; }
   .hero-unit-copy {
     margin: 0;
     position: relative;
@@ -452,9 +450,13 @@ a {
 
 /* iPhone (portrait) */
 @media (max-width: 667px) {
+  .hero-unit {
+    text-align: center; }
   .hero-unit-copy {
     padding: 20px;
-    padding-bottom: 25px; }
+    padding-bottom: 25px;
+    max-width: 500px;
+    display: inline-block; }
   .hero-unit-copy h1 {
     font-size: 28px;
     font-weight: 500; }
@@ -764,6 +766,10 @@ a {
   .panel4 .flat-button {
     margin: 15px 0 20px 0 !important; } }
 
+html[data-ua*=Firefox] .panel4-graph circle {
+  transform-origin: 0 0;
+  transition: none; }
+
 /* Panel 5 */
 .panel5 {
   margin-bottom: 150px; }
@@ -776,9 +782,7 @@ a {
   padding-right: 18px; }
 
 .panel5-laptop {
-  width: 68%;
-  margin-left: -6%;
-  padding-left: 18px;
+  width: calc(62% - 36px);
   z-index: -1;
   position: absolute;
   right: 38px;
@@ -827,10 +831,7 @@ a {
 /* Hit grid at max size */
 @media (min-width: 1172px) {
   .panel5 header {
-    width: 390px; }
-  .panel5-laptop {
-    width: 777px;
-    margin-left: -72px; } }
+    width: 390px; } }
 
 /* iPhone (portrait) */
 @media (max-width: 667px) {
@@ -857,9 +858,9 @@ a {
     margin: 20px 0 60px 0;
     position: relative;
     left: -20px;
-    height: 300px; }
+    width: 130%; }
   .panel5-header img.left {
-    margin-left: -30%; } }
+    margin-left: -24%; } }
 
 /* Panel 6 */
 .panel6 {

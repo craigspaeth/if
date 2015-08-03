@@ -49,6 +49,8 @@
 
   .hero-unit {
     height: auto;
+    background: url(images/mobilebg.jpg) left center;
+    background-size: cover;
   }
 
   .hero-unit-copy {
@@ -64,9 +66,15 @@
 /* iPhone (portrait) */
 @media (max-width: 667px) {
 
+  .hero-unit {
+    text-align: center;
+  }
+
   .hero-unit-copy {
     padding: $mobile-gutter-size;
     padding-bottom: $mobile-gutter-size + 5px;
+    max-width: 500px;
+    display: inline-block;
   }
 
   .hero-unit-copy h1 {
