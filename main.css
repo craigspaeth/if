@@ -872,11 +872,12 @@ html[data-ua*=Firefox] .panel4-graph circle {
   border-bottom: 2px solid #808580;
   margin: 0 0 0 3px;
   font-size: 21px;
-  width: 26px;
+  width: 36px;
   font-family: "Volkhov", "Vollkorn", "Georgia", serif;
   outline: none;
   padding-bottom: 5px;
-  color: #6EA34E; }
+  color: #6EA34E;
+  text-align: center; }
 
 .panel6-age:focus {
   border-color: #6EA34E; }
