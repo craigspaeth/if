@@ -37,6 +37,7 @@ $(function() {
 
         // Fade out/in video just before end
         $(vid).on("timeupdate", function() {
+          if($(window).width() <= MOBILE_BREAKPOINT) return;
           if (vid.duration - vid.currentTime <= 1) {
             $('.hero-unit').removeClass('is-loaded');
             setTimeout(function() {
@@ -47,6 +48,11 @@ $(function() {
       }
     }, 500);
   }
+  $(window).on('resize', _.debounce(function() {
+    if($(window).width() <= MOBILE_BREAKPOINT) {
+      $('.hero-unit').addClass('is-loaded');
+    }
+  }, 500));
 
   // Start & stop "unlocked access" animation
   if($(window).width() > MOBILE_BREAKPOINT) {

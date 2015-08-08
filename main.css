@@ -437,7 +437,7 @@ a {
   transition: opacity 0.7s ease-in; }
 
 .hero-unit.is-loaded {
-  background: black; }
+  background-color: black; }
 
 .hero-unit.is-loaded video {
   opacity: 0.65; }
