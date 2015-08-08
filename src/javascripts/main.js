@@ -28,23 +28,25 @@ $(function() {
   });
 
   // Fade in video on load
-  var vid = $('.hero-unit-video video')[0];
-  var videoInterval = setInterval(function() {
-    if (vid.readyState === 4) {
-      $('.hero-unit').addClass('is-loaded');
-      clearInterval(videoInterval);
+  if ($(window).width() > MOBILE_BREAKPOINT) {
+    var vid = $('.hero-unit-video video')[0];
+    var videoInterval = setInterval(function() {
+      if (vid.readyState === 4) {
+        $('.hero-unit').addClass('is-loaded');
+        clearInterval(videoInterval);
 
-      // Fade out/in video just before end
-      $(vid).on("timeupdate", function() {
-        if (vid.duration - vid.currentTime <= 1) {
-          $('.hero-unit').removeClass('is-loaded');
-          setTimeout(function() {
-            $('.hero-unit').addClass('is-loaded');
-          }, 700);
-        }
-      });
-    }
-  }, 500);
+        // Fade out/in video just before end
+        $(vid).on("timeupdate", function() {
+          if (vid.duration - vid.currentTime <= 1) {
+            $('.hero-unit').removeClass('is-loaded');
+            setTimeout(function() {
+              $('.hero-unit').addClass('is-loaded');
+            }, 700);
+          }
+        });
+      }
+    }, 500);
+  }
 
   // Start & stop "unlocked access" animation
   if($(window).width() > MOBILE_BREAKPOINT) {
