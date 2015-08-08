@@ -1,9 +1,10 @@
 .hero-unit {
-  background: black;
+  background: #1E262D;
   height: 56vw;
   max-height: 85vh;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.7s ease-in;
 }
 
 .hero-unit-copy {
@@ -41,7 +42,16 @@
 .hero-unit-video video {
   width: 100%;
   position: absolute;
-  opacity: 0.55;
+  opacity: 0;
+  transition: opacity 0.7s ease-in;
+}
+
+.hero-unit.is-loaded {
+  background: black;
+}
+
+.hero-unit.is-loaded video {
+  opacity: 0.65;
 }
 
 /* iPad (portrait) */

@@ -24,8 +24,27 @@ $(function() {
     handler: function(dir) {
       if($(window).width() > HAMBURGER_BREAKPOINT) $('.main-nav').toggleClass('active');
     },
-    offset: $('.main-nav').outerHeight() * 2
+    offset: $('.main-nav').outerHeight() * 2 + 20
   });
+
+  // Fade in video on load
+  var vid = $('.hero-unit-video video')[0];
+  var videoInterval = setInterval(function() {
+    if (vid.readyState === 4) {
+      $('.hero-unit').addClass('is-loaded');
+      clearInterval(videoInterval);
+
+      // Fade out/in video just before end
+      $(vid).on("timeupdate", function() {
+        if (vid.duration - vid.currentTime <= 1) {
+          $('.hero-unit').removeClass('is-loaded');
+          setTimeout(function() {
+            $('.hero-unit').addClass('is-loaded');
+          }, 700);
+        }
+      });
+    }
+  }, 500);
 
   // Start & stop "unlocked access" animation
   if($(window).width() > MOBILE_BREAKPOINT) {
@@ -225,7 +244,7 @@ $(function() {
         stickLaptop();
       }
     },
-    offset: $('.main-nav').outerHeight() + 20
+    offset: $('.main-nav').outerHeight() + 150
   });
 
   // Toggle sticky laptop at the bottom
@@ -238,7 +257,7 @@ $(function() {
           .removeAttr('style');
       }
     },
-    offset: $('.main-nav').outerHeight() + 13
+    offset: $('.main-nav').outerHeight() + 13 + 130
   });
   var setLastMargin = function() {
     $('.panel5 header').css({

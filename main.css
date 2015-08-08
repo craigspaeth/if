@@ -396,11 +396,12 @@ a {
 
 /* Hero Unit */
 .hero-unit {
-  background: black;
+  background: #1E262D;
   height: 56vw;
   max-height: 85vh;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: background-color 0.7s ease-in; }
 
 .hero-unit-copy {
   max-width: 800px;
@@ -432,7 +433,14 @@ a {
 .hero-unit-video video {
   width: 100%;
   position: absolute;
-  opacity: 0.55; }
+  opacity: 0;
+  transition: opacity 0.7s ease-in; }
+
+.hero-unit.is-loaded {
+  background: black; }
+
+.hero-unit.is-loaded video {
+  opacity: 0.65; }
 
 /* iPad (portrait) */
 @media (max-width: 768px) {
@@ -813,7 +821,7 @@ html[data-ua*=Firefox] .panel4-graph circle {
 
 .panel5-laptop.stuck {
   position: fixed;
-  top: 80px; }
+  top: 210px; }
 
 .panel5-laptop.bottom {
   bottom: 0;
@@ -870,14 +878,21 @@ html[data-ua*=Firefox] .panel4-graph circle {
 .panel6-age {
   border: 0;
   border-bottom: 2px solid #808580;
-  margin: 0 0 0 3px;
+  margin: 0 5px;
   font-size: 21px;
-  width: 36px;
+  width: 26px;
   font-family: "Volkhov", "Vollkorn", "Georgia", serif;
   outline: none;
   padding-bottom: 5px;
   color: #6EA34E;
-  text-align: center; }
+  text-align: left;
+  padding: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
 
 .panel6-age:focus {
   border-color: #6EA34E; }
@@ -943,4 +958,7 @@ html[data-ua*=Firefox] .panel4-graph circle {
   .panel6-radios {
     margin: 20px 0; }
   .panel6 {
-    margin: 40px 0; } }
+    margin: 40px 0; }
+  .panel6-age {
+    width: 70px;
+    text-align: center; } }

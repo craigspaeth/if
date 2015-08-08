@@ -9,7 +9,7 @@ $(function() {
         stickLaptop();
       }
     },
-    offset: $('.main-nav').outerHeight() + 20
+    offset: $('.main-nav').outerHeight() + 150
   });
 
   // Toggle sticky laptop at the bottom
@@ -22,7 +22,7 @@ $(function() {
           .removeAttr('style');
       }
     },
-    offset: $('.main-nav').outerHeight() + 13
+    offset: $('.main-nav').outerHeight() + 13 + 130
   });
   var setLastMargin = function() {
     $('.panel5 header').css({

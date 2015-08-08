@@ -8,12 +8,12 @@
   border-bottom: 2px solid $gray-color;
   margin: 0 5px;
   font-size: $vollkorn-headline;
-  width: 70px;
+  width: 26px;
   font-family: $vollkorn-family;
   outline: none;
   padding-bottom: 5px;
   color: $green-color;
-  text-align: center;
+  text-align: left;
   padding: 0;
   border-radius: 0;
   @include appearance(none);
@@ -113,5 +113,10 @@
 
   .panel6 {
     margin: ($mobile-gutter-size * 2) 0;
+  }
+
+  .panel6-age {
+    width: 70px;
+    text-align: center;
   }
 }
