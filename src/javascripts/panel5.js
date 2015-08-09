@@ -9,7 +9,7 @@ $(function() {
         stickLaptop();
       }
     },
-    offset: $('.main-nav').outerHeight() + 150
+    offset: $('.main-nav').outerHeight() + LAPTOP_MARGIN
   });
 
   // Toggle sticky laptop at the bottom
@@ -48,12 +48,22 @@ $(function() {
     }
   });
   $('.panel5-header:nth-child(2)').waypoint({
-    handler: function() {
-      $('.panel5-laptop-screen img:first-child').animate({
-        'margin-top': -$('.panel5-laptop-screen img:first-child').height()
-      }, 500, 'easeInOutCubic');
+    handler: function(dir) {
+      if (dir == 'up')
+        $('.panel5-laptop-screen img:first-child').animate({
+          'margin-top': -$('.panel5-laptop-screen img:first-child').height()
+        }, 500, 'easeInOutCubic');
     },
-    offset: '50%'
+    offset: LAPTOP_MARGIN
+  });
+  $('.panel5-header:nth-child(2)').waypoint({
+    handler: function(dir) {
+      if (dir == 'down')
+        $('.panel5-laptop-screen img:first-child').animate({
+          'margin-top': -$('.panel5-laptop-screen img:first-child').height()
+        }, 500, 'easeInOutCubic');
+    },
+    offset: '80%'
   });
   $('.panel5-header:nth-child(3)').waypoint({
     handler: function() {
